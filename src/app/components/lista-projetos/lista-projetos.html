@@ -1,0 +1,12 @@
+<div class="projetos-container">
+  <h3>Meus Projetos (Vindos da API .NET!)</h3>
+
+  @for (proj of projetos(); track proj.id) {
+    <div class="projeto-card">
+      <h4>{{ proj.titulo }}</h4>
+      <p>Status: {{ proj.concluida ? 'Concluído' : 'Em Andamento' }}</p>
+    </div>
+  } @empty {
+    <p>Nenhum projeto encontrado. (Verifique se a API está rodando!)</p>
+  }
+</div>
